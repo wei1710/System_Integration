@@ -75,6 +75,8 @@ web_modules/
 # Output of 'npm pack'
 *.tgz
 
+*venv
+
 # Yarn Integrity file
 .yarn-integrity
 

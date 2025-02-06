@@ -1,0 +1,17 @@
+[project]
+name = "03-poetry"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Wei Yang",email = "weix0015@stud.kea.dk"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "emoji (>=2.14.1,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
