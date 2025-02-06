@@ -1,6 +1,6 @@
 class ClassA {
   constructor() {
-    console.log("Class A initialized");
+      console.log("Class A initialized");
   }
 }
 
