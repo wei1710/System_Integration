@@ -14,7 +14,7 @@ app.get("/json", (req, res) => {
 
 app.get("/csv", (req, res) => {
     const data = fs.readFileSync(path.join(BASE_FOLDER, `${FILE_NAME}.csv`), ENCODE);
-    res.send(data);
+    res.send(`<pre>` + data + `</pre>`);
 });
 
 app.get("/xml", (req, res) => {
