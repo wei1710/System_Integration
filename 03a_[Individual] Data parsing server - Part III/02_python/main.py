@@ -5,7 +5,7 @@ app = FastAPI()
 BASE_FOLDER = os.path.join("..", "..", "02_Text-based_Data_Formats")
 FILE_NAME = "me"
 ENCODE = "utf-8"
-BASE_URL = "http://127.0.0.1:8080";
+BASE_URL = "http://127.0.0.1:8080"
 
 @app.get("/json")
 def json_endpoint():
