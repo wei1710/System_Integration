@@ -3,6 +3,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import StreamingResponse
 from datetime import datetime
 import asyncio
+import random
 
 app = FastAPI()
 
@@ -17,9 +18,20 @@ async def date_generator():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     yield f"data: {now}\n\n"
     await asyncio.sleep(1)
-    
+
+async def text_generator():
+  while True:
+    word_list = ["apple", "banana", "cherry", "dragonfruit", "elephant", "forest"]
+    random_word = random.choice(word_list)
+    yield f"data: {random_word} \n\n"
+    await asyncio.sleep(1)
+
 
 @app.get("/sse")
 def sse():
   return StreamingResponse(date_generator(), media_type="text/event-stream")
+
+@app.get("/word")
+async def date():
+  return StreamingResponse(text_generator(), media_type="text/event-stream")
 
