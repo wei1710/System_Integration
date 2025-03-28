@@ -10,7 +10,7 @@ const BASE_URL = "http://127.0.0.1:8000";
 
 app.get("/json", (req, res) => {
     const data = fs.readFileSync(path.join(BASE_FOLDER, `${FILE_NAME}.json`), ENCODE);
-    res.json(JSON.parse(data));
+    res.send(JSON.parse(data));
 });
 
 app.get("/csv", (req, res) => {
