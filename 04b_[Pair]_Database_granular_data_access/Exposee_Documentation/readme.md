@@ -21,7 +21,7 @@ Databasen **`product`** er tilgængelig via Reverse Tunnel og indeholder:
 
 ### **Tabellernes Struktur og Indhold**
 
-**`keyboard`
+**`keyboard`**
 * Indeholder oplysninger om tastaturer.
 * Tabeldata:
     * **`id`**: 1, **`brand`**: "Keychron", **`model`**: "K6", **`price`**: 89.99
