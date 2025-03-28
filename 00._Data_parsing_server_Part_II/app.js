@@ -9,7 +9,7 @@ const ENCODE = "utf-8";
 
 app.get("/json", (req, res) => {
     const data = fs.readFileSync(path.join(BASE_FOLDER, `${FILE_NAME}.json`), ENCODE);
-    res.json(JSON.parse(data));
+    res.send(JSON.parse(data));
 });
 
 app.get("/csv", (req, res) => {
