@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <title>Auth Integration</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Authentication</h1>
+
+    <div id="google-login">
+      <button onclick="signInWithGoogle()">Sign In with Google</button>
+      <p id="google-error" class="error"></p>
+    </div>
+
+    <div id="auth-state">
+      <h2>Authentication State</h2>
+      <p id="user-info">Not logged in</p>
+      <button onclick="signOutUser()">Sign Out</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
