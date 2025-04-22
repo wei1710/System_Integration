@@ -160,7 +160,7 @@ Guide to set up Google Authentication with Firebase in your web application.
 
 8.  **Modify `package.json` for ES Modules:** After running `npm init -y`, a `package.json` file will have been created in your project root. Open this file. You need to change to `"type": "module"` to this file to enable the use of ES Modules.
 
-```json
+```
 {
   "name": "auth_integration",
   "version": "1.0.0",
