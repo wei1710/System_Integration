@@ -142,12 +142,12 @@ Guide to set up Google Authentication with Firebase in your web application.
 5.  **Create `.env` in `auth-integration`:** Create a file named `.env` in the main project folder and paste your Firebase configuration values here. **Replace the placeholder values with your actual credentials from Step 1.**
 
     ```
-    API_KEY="YOUR_API_KEY"
-    AUTH_DOMAIN="YOUR_PROJECT_ID.firebaseapp.com"
-    PROJECT_ID="YOUR_PROJECT_ID"
-    STORAGE_BUCKET="YOUR_PROJECT_ID.appspot.com"
-    MESSAGING_SENDER_ID="YOUR_MESSAGING_SENDER_ID"
-    APP_ID="YOUR_APP_ID"
+    API_KEY="API_KEY"
+    AUTH_DOMAIN="PROJECT_ID.firebaseapp.com"
+    PROJECT_ID="PROJECT_ID"
+    STORAGE_BUCKET="PROJECT_ID.appspot.com"
+    MESSAGING_SENDER_ID="MESSAGING_SENDER_ID"
+    APP_ID="APP_ID"
     ```
 
 6.  **Open Terminal:** Navigate to your `auth-integration` folder in your terminal.
@@ -181,7 +181,7 @@ Guide to set up Google Authentication with Firebase in your web application.
 }
 ```
 
-9.  **Create `server.js` in `auth-integration`:** Create a file named `server.js` in the main project folder and paste the following Node.js server code into it:
+9.  **Create `server.js` in `auth-integration`:** Create a file named `server.js` in the main project folder.
 
     ```javascript
     import 'dotenv/config';
@@ -215,11 +215,11 @@ Guide to set up Google Authentication with Firebase in your web application.
 
 ## Step 3: Run Locally
 
-1.  **Start Server:** Run the following command to start your Node.js server (you might want to install `nodemon` globally for automatic restarts on file changes: `npm install -g nodemon` and then use `nodemon server.js`):
+1.  **Start Server:** Run the command to start the server.
 
     ```bash
     nodemon server.js
     ```
 
-2.  **Open Browser:** Open your web browser and navigate to `http://localhost:8080/`.
+2.  **Open Browser:** Open the web browser and go to `http://localhost:8080/`.
 3.  **Test Google Sign-in:** Click the "Sign In with Google" button and follow the prompts to authenticate with your Google account. Check the "Authentication State" section on the page to see authentication state.
