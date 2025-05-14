@@ -1,7 +1,3 @@
-# 10a [Individual] Document A Database
-
-**Type**: Individual
-
-Use a **tool** to document any database.
+# 10a Document A Database
 
 <img src="./er_diagram.png">
