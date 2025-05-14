@@ -107,7 +107,7 @@ router.get("/ping", async (req, res) => {
         const pingPayload = {
             event_type: "ping",
             timestamp: new Date().toISOString(),
-            message: "This is a test ping from the webhook system."
+            message: "This is a ping from the webhook system."
         };
 
         console.log(`Triggering ping event for ${webhooks.length} registered webhooks.`);
