@@ -52,14 +52,14 @@ Subscribe your webhook receiver URL to specific event types.
     ```
 
 * **Success Response (`201 Created`):** 
-```json
-{ 
-	"message": "Webhook registered successfully.",
-	"url": "WEBHOOK_RECEIVER_URL",
-	"event_types": ["event.type.1", "event.type.2"],
-	"registeredAt": "date and timestamp"
-}
-```
+	```json
+	{ 
+		"message": "Webhook registered successfully.",
+		"url": "WEBHOOK_RECEIVER_URL",
+		"event_types": ["event.type.1", "event.type.2"],
+		"registeredAt": "date and timestamp"
+	}
+	```
 	
 * **Errors:**
     * `400 Bad Request`: Invalid or missing data in the request body (missing URL, invalid URL format, missing or invalid event types).
@@ -85,13 +85,13 @@ Remove a registered webhook subscription.
     * With `event_types` provided, the registration is removed if the URL matches and it's subscribed to minimum one of the specified event types.
 
 * **Success Response (`200 OK`):** 
-```json
-{
-	"message": "Webhooks unregistered successfully.",
-	"url": "REGISTERED_WEBHOOK_URL"
-	"removedCount": 1
-}
-```
+	```json
+	{
+		"message": "Webhooks unregistered successfully.",
+		"url": "REGISTERED_WEBHOOK_URL"
+		"removedCount": 1
+	}
+	```
 * **Errors:**
     * `400 Bad Request`: Invalid or missing URL.
     * `404 Not Found`: No matching webhook registration found for the provided URL and event types (if specified).
@@ -108,10 +108,10 @@ Trigger a test webhook call to all currently registered webhooks.
 * **URL:** `https://nasty-ways-kneel.loca.lt/ping`
 
 * **Success Response (`200 OK`):** 
-```json
-{ 
-	"message": "Ping event triggered for all registered webhooks." 
-}
-```
+	```json
+	{ 
+		"message": "Ping event triggered for all registered webhooks." 
+	}
+	```
 * **Errors:**
     * `500 Internal Server Error`: An unexpected server error occurred.
