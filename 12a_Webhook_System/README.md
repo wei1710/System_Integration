@@ -6,7 +6,6 @@ This server provides a webhook service, enabling external systems to receive not
 
 1.  A receiving system runs a server configured to accept incoming webhooks.
 2.  The receiving system registers its unique URL and selects the event types they wish to receive via this System's API.
-3.  When a relevant Event occurs within this System, an HTTP POST request containing the event data is automatically sent to the subscribed URLs.
 
 ## Available Event Types
 
