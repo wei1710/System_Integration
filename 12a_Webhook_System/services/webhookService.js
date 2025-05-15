@@ -26,7 +26,7 @@ export const readWebhooks = async () => {
         const data = await readFile(WEBHOOKS_FILE, 'utf-8');
         return data ? JSON.parse(data) : [];
     } catch (error) {
-        console.warn(`[Exposee] Could not read or parse ${WEBHOOKS_FILE}. Treating as empty. Error: ${error.message}`);
+        console.warn(`Could not read or parse ${WEBHOOKS_FILE}. Treating as empty. Error: ${error.message}`);
         return [];
     }
 };
@@ -36,6 +36,6 @@ export const writeWebhooks = async (webhooks) => {
         const data = JSON.stringify(webhooks, null, 2);
         await writeFile(WEBHOOKS_FILE, data, 'utf-8');
     } catch (error) {
-        console.error(`[Exposee] Error writing ${WEBHOOKS_FILE}:`, error);
+        console.error(`Error writing ${WEBHOOKS_FILE}:`, error);
     }
 };
